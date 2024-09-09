@@ -3,10 +3,77 @@
 {% block title %}Add a comment{% endblock %}
 
 {% block content %}
-  {% if comment %}
-    <h2>Your comment has been added.</h2>
-    <p><a href="{{ post.get_absolute_url }}">Back to the post</a></p>
-  {% else %}
-    {% include "blog/post/includes/comment_form.html" %}
-  {% endif %}
+  <div class="comment-section">
+    {% if comment %}
+      <h2 class="comment-success">Your comment has been added.</h2>
+      <p class="back-link">
+        <a href="{{ post.get_absolute_url }}">Back to the post</a>
+      </p>
+    {% else %}
+      <div class="comment-form">
+        {% include "blog/post/includes/comment_form.html" %}
+      </div>
+    {% endif %}
+  </div>
 {% endblock %}
+
+<style>
+  /* General page layout */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Comment section styling */
+  .comment-section {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Success message styling */
+  .comment-success {
+    font-size: 24px;
+    color: #4CAF50;
+    text-align: center;
+  }
+
+  /* Back link styling */
+  .back-link {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .back-link a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+  }
+
+  .back-link a:hover {
+    color: #388E3C;
+  }
+
+  /* Comment form styling */
+  .comment-form {
+    margin-top: 20px;
+  }
+
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .comment-section {
+      padding: 15px;
+      margin: 30px auto;
+    }
+
+    .comment-success {
+      font-size: 20px;
+    }
+  }
+</style>
