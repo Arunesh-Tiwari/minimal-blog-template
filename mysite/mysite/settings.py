@@ -132,3 +132,10 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://friendly-capybara-9xqwrjpp7w7cx76g-8000.app.github.dev',  # Replace with your production domain
+    'https://localhost:8000',
+]
+
+SESSION_COOKIE_DOMAIN = '.friendly-capybara-9xqwrjpp7w7cx76g-8000.app.github.dev'  # Replace with your actual domain
