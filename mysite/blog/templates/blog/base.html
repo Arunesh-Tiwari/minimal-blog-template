@@ -1,18 +1,60 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>{% block title %}{% endblock %}</title>
   <link href="{% static 'css/blog.css' %}" rel="stylesheet">
 </head>
+
 <body>
   <div id="content">
     {% block content %}
     {% endblock %}
   </div>
   <div id="sidebar">
+
     <h2>Discover More</h2>
     <p>Get to know more about me and my interests.</p>
+
+    <h2>My blog</h2>
+    <p>This is my blog.</p>
+
+    <div class="social-buttons">
+      <a href="#" id="facebook-share" class="social-button facebook" aria-label="Share on Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#" id="linkedin-share" class="social-button linkedin" aria-label="Share on LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="#" id="twitter-share" class="social-button x" aria-label="Share on X">
+        <i class="fa-brands fa-x-twitter"></i>
+      </a>
+    </div>
+
   </div>
+
+  <script src="https://kit.fontawesome.com/0b6f1d0109.js" crossorigin="anonymous"></script>
+  <script>document.addEventListener('DOMContentLoaded', function () {
+
+      const pageUrl = encodeURIComponent(window.location.href);
+      const pageTitle = encodeURIComponent(document.title);
+
+      const facebookShare = document.getElementById('facebook-share');
+      const linkedinShare = document.getElementById('linkedin-share');
+      const twitterShare = document.getElementById('twitter-share');
+
+      if (facebookShare) {
+        facebookShare.href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+      }
+      if (linkedinShare) {
+        linkedinShare.href = `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`;
+      }
+      if (twitterShare) {
+        twitterShare.href = `https://twitter.com/intent/tweet?url=${pageUrl}&text=Check out this blog post: ${pageTitle}`;
+      }
+    });
+  </script>
 </body>
+
 </html>
