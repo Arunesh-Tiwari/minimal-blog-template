@@ -97,6 +97,356 @@ input[type=submit] {
 }
 
 .comment .info {
+    font-weight:bold;
+    font-size:12px;
+    color:#666;
+}
+/* Container for the share post section */
+.share-post-container {
+    max-width: 500px; /* Reduced width for a more compact form */
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Success message styling */
+  .success-message {
+    font-size: 22px; /* Slightly smaller font size */
+    color: #4CAF50;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .success-detail {
+    font-size: 16px; /* Reduced font size */
+    color: #555;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  /* Share post title */
+  .share-title {
+    font-size: 24px; /* Smaller title font size */
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Form styling */
+  .share-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Reduced gap between form fields */
+  }
+  
+  /* Input and textarea styling */
+  .share-form input[type="text"],
+  .share-form input[type="email"],
+  .share-form textarea {
+    width: 100%;
+    padding: 8px; /* Reduced padding for smaller input fields */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px; /* Smaller font size */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  .share-form input[type="text"]:focus,
+  .share-form input[type="email"]:focus,
+  .share-form textarea:focus {
+    border-color: #4CAF50;
+  }
+  
+  /* Submit button styling */
+  .submit-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 15px; /* Reduced padding for smaller button */
+    font-size: 14px; /* Smaller font size */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #388E3C;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .share-post-container {
+      padding: 15px;
+    }
+  
+    .share-title {
+      font-size: 20px;
+    }
+  
+    .success-message {
+      font-size: 18px;
+    }
+  }
+  
+  /* List view css */
+  /* Container for the blog posts */
+.blog-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e0e0e0;
+  }
+  
+  /* Blog title */
+  .blog-title {
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #222;
+    font-family: 'Georgia', serif;
+  }
+  
+  /* Post preview section */
+  .post-preview {
+    margin-bottom: 35px;
+    padding: 25px;
+    background-color: #fafafa;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e0e0e0;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .post-preview:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+  }
+  
+  /* Post title */
+  .post-title a {
+    font-size: 24px;
+    color: #222;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
+  .post-title a:hover {
+    color: #2a9d8f;
+  }
+  
+  /* Date styling */
+  .date {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Snippet of the post body */
+  .post-snippet {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    font-family: 'Georgia', serif;
+  }
+  
+  /* Read more link */
+  .read-more {
+    font-size: 14px;
+    color: #2a9d8f;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid #2a9d8f;
+    padding-bottom: 2px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+  
+  .read-more:hover {
+    color: #1f776c;
+    border-color: #1f776c;
+  }
+  
+  /* Pagination styles */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination a {
+    padding: 8px 12px;
+    margin: 0 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .pagination a:hover {
+    background-color: #2a9d8f;
+    color: #fff;
+  }
+  
+  .pagination .current {
+    background-color: #2a9d8f;
+    color: #fff;
+    border: none;
+  }
+
+  /*Comment view css*/
+/* General form styling */
+.comment-form {
+    max-width: 600px; /* Reduced width */
+    margin: 20px auto; /* Reduced margin */
+    padding: 15px; /* Reduced padding */
+    background-color: #f4f4f4;
+    border-radius: 6px; /* Slightly smaller border-radius */
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+  }
+  
+  /* Form title */
+  .comment-form h2 {
+    font-size: 20px; /* Smaller font size */
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px; /* Reduced margin */
+  }
+  
+  /* Form group layout */
+  .form-group {
+    display: flex;
+    flex-direction: column; /* Stack fields vertically for compact look */
+    gap: 15px; /* Reduced gap */
+  }
+  
+  /* Form field */
+  .form-field {
+    width: 100%; /* Ensure full width */
+  }
+  
+  /* Form labels */
+  .comment-form label {
+    display: block;
+    margin-bottom: 4px; /* Reduced margin */
+    font-weight: bold;
+    color: #333;
+    font-size: 14px; /* Smaller font size */
+  }
+  
+  /* Input and textarea styling */
+  .comment-form input[type="text"],
+  .comment-form input[type="email"],
+  .comment-form textarea {
+    width: 100%;
+    padding: 8px; /* Reduced padding */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px; /* Smaller font size */
+    background-color: #fff;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  .comment-form input[type="text"]:focus,
+  .comment-form input[type="email"]:focus,
+  .comment-form textarea:focus {
+    border-color: #4CAF50;
+  }
+  
+  .comment-form textarea {
+    height: 120px; /* Reduced height */
+  }
+  
+  /* Submit button styling */
+  .submit-btn {
+    text-align: center;
+    margin-top: 15px; /* Reduced margin */
+  }
+  
+  .submit-button {
+    padding: 8px 15px; /* Reduced padding */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px; /* Slightly smaller font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .form-group {
+      flex-direction: column;
+    }
+  
+    .form-field {
+      width: 100%;
+    }
+  }
+/* Reset some default browser styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Basic body styling */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+  }
+  
+  /* Main content styling */
+  #content {
+    width: 70%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+  }
+  
+  /* Sidebar styling */
+  #sidebar {
+    width: 25%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading styling */
+  h2 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Paragraph styling */
+  p {
+    margin-bottom: 20px;
+  }
+    
+=======
     font-weight: bold;
     font-size: 12px;
     color: #666;
@@ -166,3 +516,4 @@ input[type=submit] {
         font-size: 18px;
     }
 }
+
